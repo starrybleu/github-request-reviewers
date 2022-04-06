@@ -8,7 +8,8 @@ const repo = process.argv[2]
 const pull_number = process.argv[3]
 const owner = process.argv[4] || 'dramancompany'
 
-const SERVER_TEAM_DEVS = ['deopard', 'dizy64', 'ace9809', 'sallgoood', 'nasang88', 'taehwakang']
+// const SERVER_TEAM_DEVS = ['deopard', 'dizy64', 'ace9809', 'nasang88', 'taehwakang', 'milkit-moon' ]
+const SERVER_TEAM_DEVS = ['ace9809', 'taehwakang', 'milkit-moon', 'roharon', 'shinsunyoung', 'edw1n26', 'hyoungrolee', 'iuasdofil', 'jiso0jung', 'KingCjy', 'nasang10', 'soolab']
 
 // POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers
 axios.post(`https://api.github.com/repos/${owner}/${repo}/pulls/${pull_number}/requested_reviewers`, {
@@ -20,3 +21,4 @@ axios.post(`https://api.github.com/repos/${owner}/${repo}/pulls/${pull_number}/r
   // console.log(res.data) // If needed.
 })
 .catch(console.error)
+
